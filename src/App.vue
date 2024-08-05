@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import FirstDemo from "./pages/FirstDemo.vue";
+import VueUseDemo from "./pages/VueUseDemo.vue";
 </script>
 
 <template>
@@ -12,8 +13,9 @@ import FirstDemo from "./pages/FirstDemo.vue";
 <!--      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo"/>-->
 <!--    </a>-->
 <!--  </div>-->
-  <HelloWorld msg="Vite + Vue"/>
+<!--  <HelloWorld msg="Vite + Vue"/>-->
   <FirstDemo/>
+  <VueUseDemo/>
 </template>
 
 <style scoped>
