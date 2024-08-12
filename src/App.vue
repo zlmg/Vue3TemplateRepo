@@ -3,13 +3,14 @@ import {computed, ref} from "vue";
 import HelloWorldPage from "./pages/demo/HelloWorldPage.vue";
 import NotFound from "./pages/demo/NotFound.vue";
 import DemoIndex from "./pages/demo/index.vue"
+import TestHashDemo from "./pages/demo/TestHashDemo.vue";
 
 const routes: { [key: string]: any} = {
   '/': HelloWorldPage,
   '/demo': DemoIndex,
+  'hash': TestHashDemo,
 }
 
-debugger
 const currentPath = ref(window.location.hash)
 window.addEventListener('hashchange', () => {
   currentPath.value = window.location.hash
@@ -24,6 +25,7 @@ const currentView = computed(() => {
   <div class="menu">
     <a href="#/">Home</a>
     <a href="#/demo">Demo</a>
+    <a href="#hash">Hash</a>
   </div>
   <component :is="currentView"></component>
 </template>
